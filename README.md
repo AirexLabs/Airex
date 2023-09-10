@@ -2,5 +2,5 @@
 
 Script:
 ```lua
-loadstring(game:HttpGet('https://github.com/AirexLabs/Airex/raw/main/Airex.lua'))()
+loadstring(game:HttpGet('https://github.com/AirexLabs/Airex/raw/main/Airex.lua', true))()
 ```
