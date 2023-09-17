@@ -1,3 +1,5 @@
+-- from iy
+
 local Players = game:GetService("Players");
 local Workspace = game:GetService("Workspace");
 
@@ -9,7 +11,7 @@ FLYING = false;
 getgenv().AirexFlySpeed = 1;
 getgenv().VFlySpeed = 1;
 
-getgenv().Fly = function(vfly)
+getgenv().AirexFly = function(vfly)
 	FLYING = false;
 	while not LocalPlayer or not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or not LocalPlayer.Character:FindFirstChild('Humanoid') or not LocalPlayerMouse do
 		task.wait();
@@ -146,7 +148,7 @@ getgenv().Fly = function(vfly)
 	FLY();
 end
 
-getgenv().Unfly = function()
+getgenv().AirexUnfly = function()
 	FLYING = false;
 	LocalPlayer.Character.Humanoid.PlatformStand = false;
 end
