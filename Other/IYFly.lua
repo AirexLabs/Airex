@@ -6,10 +6,10 @@ local LocalPlayerMouse = LocalPlayer:GetMouse();
 
 FLYING = false;
 
-FlySpeed = 1;
-VFlySpeed = 1;
+getgenv().AirexFlySpeed = 1;
+getgenv().VFlySpeed = 1;
 
-Fly = function(vfly)
+getgenv().Fly = function(vfly)
 	FLYING = false;
 	while not LocalPlayer or not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or not LocalPlayer.Character:FindFirstChild('Humanoid') or not LocalPlayerMouse do
 		task.wait();
@@ -146,7 +146,7 @@ Fly = function(vfly)
 	FLY();
 end
 
-Unfly = function()
+getgenv().Unfly = function()
 	FLYING = false;
 	LocalPlayer.Character.Humanoid.PlatformStand = false;
 end
