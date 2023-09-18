@@ -6,10 +6,10 @@ local Workspace = game:GetService("Workspace");
 local LocalPlayer = Players.LocalPlayer;
 local LocalPlayerMouse = LocalPlayer:GetMouse();
 
-FLYING = false;
+local FLYING = false;
 
 getgenv().AirexFlySpeed = 1;
-getgenv().VFlySpeed = 1;
+getgenv().AirexVFlySpeed = 1;
 
 getgenv().AirexFly = function(vfly)
 	FLYING = false;
@@ -71,61 +71,61 @@ getgenv().AirexFly = function(vfly)
 		--[[
 		if KEY:lower() == 'w' then
 			if vfly then
-				CONTROL.F = VFlySpeed;
+				CONTROL.F = getgenv().AirexVFlySpeed;
 			else
-				CONTROL.F = FlySpeed;
+				CONTROL.F = getgenv().AirexFlySpeed;
 			end
 		elseif KEY:lower() == 's' then
 			if vfly then
-				CONTROL.B = - VFlySpeed;
+				CONTROL.B = - getgenv().AirexVFlySpeed;
 			else
-				CONTROL.B = - FlySpeed;
+				CONTROL.B = - getgenv().AirexFlySpeed;
 			end
 		elseif KEY:lower() == 'a' then
 			if vfly then
-				CONTROL.L = - VFlySpeed;
+				CONTROL.L = - getgenv().AirexVFlySpeed;
 			else
-				CONTROL.L = - FlySpeed;
+				CONTROL.L = - getgenv().AirexFlySpeed;
 			end
 		elseif KEY:lower() == 'd' then
 			if vfly then
-				CONTROL.R = VFlySpeed;
+				CONTROL.R = getgenv().AirexVFlySpeed;
 			else
-				CONTROL.R = FlySpeed;
+				CONTROL.R = getgenv().AirexFlySpeed;
 			end
 		elseif KEY:lower() == 'y' then
 			if vfly then
-				CONTROL.Q = VFlySpeed*2;
+				CONTROL.Q = getgenv().AirexVFlySpeed*2;
 			else
-				CONTROL.Q = FlySpeed*2;
+				CONTROL.Q = getgenv().AirexFlySpeed*2;
 			end
 		elseif KEY:lower() == 't' then
 			if vfly then
-				CONTROL.E = -VFlySpeed*2;
+				CONTROL.E = -getgenv().AirexVFlySpeed*2;
 			else
-				CONTROL.E = -FlySpeed*2;
+				CONTROL.E = -getgenv().AirexFlySpeed*2;
 			end
 		end
 		]]
 
 		if KEY:lower() == 'w' then
-			CONTROL.F = VFlySpeed;
-			CONTROL.F = FlySpeed;
+			CONTROL.F = getgenv().AirexVFlySpeed;
+			CONTROL.F = getgenv().AirexFlySpeed;
 		elseif KEY:lower() == 's' then
-			CONTROL.B = - VFlySpeed;
-			CONTROL.B = - FlySpeed;
+			CONTROL.B = - getgenv().AirexVFlySpeed;
+			CONTROL.B = - getgenv().AirexFlySpeed;
 		elseif KEY:lower() == 'a' then
-			CONTROL.L = -VFlySpeed;
-			CONTROL.L = -FlySpeed;
+			CONTROL.L = -getgenv().AirexVFlySpeed;
+			CONTROL.L = -getgenv().AirexFlySpeed;
 		elseif KEY:lower() == 'd' then
-			CONTROL.R = VFlySpeed;
-			CONTROL.R = FlySpeed;
+			CONTROL.R = getgenv().AirexVFlySpeed;
+			CONTROL.R = getgenv().AirexFlySpeed;
 		elseif KEY:lower() == 'y' then
-			CONTROL.Q = VFlySpeed * 2;
-			CONTROL.Q = FlySpeed * 2;
+			CONTROL.Q = getgenv().AirexVFlySpeed * 2;
+			CONTROL.Q = getgenv().AirexFlySpeed * 2;
 		elseif KEY:lower() == 't' then
-			CONTROL.E = -VFlySpeed * 2;
-			CONTROL.E = -FlySpeed * 2;
+			CONTROL.E = -getgenv().AirexVFlySpeed * 2;
+			CONTROL.E = -getgenv().AirexFlySpeed * 2;
 		end
 	end)
 
